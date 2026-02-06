@@ -348,10 +348,9 @@ Facciamo partire il profiler della memoria:
 
 ![screenshot_memoria_3](images/screenshot_memoria_3.png)
 
-Infine, guardiamo anche il profiler _microarchitecture
+Infine, guardiamo anche il profiler_microarchitecture
 
-_
-![screenshot_arch](images/screenshot _summary_architecture.png)
+![screenshot_arch](images/screenshot_summary_architecture.png)
 
 
 ![screenshot_arch_1](images/screenshots_pcores.png)
