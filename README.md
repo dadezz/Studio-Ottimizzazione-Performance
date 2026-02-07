@@ -329,7 +329,7 @@ I risultati sono chiari ,il passaggio a un layout di memoria contiguo ha dato i 
 
 Allo stato attuale delle cose, sembrerebbe inutile qualsiasi tipo di ottimizzazione ulteriore, in quanto non è la cpu il collo di bottiglia, ma la velocità di caricamento dalla memoria. Sebbene controintuitivo, invece, il SIMD (cioè sfruttare i registri AVX per ulteriore *instruction level parallelism*) può aiutare. Non è infatti vero che questa situazione è causata per forza dalla saturazione del bus. Può essere che la cpu non "chieda" abbastanza spesso nuovi dati. 
 Controlliamo l'assembly generato
-![screenshot assembly](images/screenshot assembly.png)
+![screenshot_assembly](images/screenshot_assembly.png)
 Guardando per esempio il blocco 6, si vedono già istruzioni che appartengono al set SSE/AVX, conferma che il compilatore ha già auto-vettorizzato il loop meglio che poteva (considerando anche che `vector<char>` non è allineato e 1000 non è potenza di 2).
 
 * `vpsllvd xmm0, xmm4, xmm1`: Questa è un'istruzione AVX2 (Variable Shift Left Logical) che esegue lo shift a sinistra su un vettore di interi.
